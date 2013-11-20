@@ -2,10 +2,8 @@ package br.com.Openbook.negocio;
 
 import java.util.List;
 
-
 public interface IRepositorioCliente {
 
-	
 	public boolean existeCliente(String cpf) throws Exception;
 
 	public List<Cliente> pesquisarCliente(String cpf) throws Exception;
