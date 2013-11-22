@@ -157,13 +157,13 @@ public class CadastroDeClientes extends JDialog {
 
 		rdbtnFeminino = new JRadioButton("Feminino");
 		rdbtnFeminino.setBackground(new Color(244, 164, 96));
-		rdbtnFeminino.setBounds(281, 94, 80, 23);
-		rdbtnFeminino.setSelected(true);
+		rdbtnFeminino.setBounds(377, 95, 80, 23);
 		painel_centro.add(rdbtnFeminino);
 
 		rdbtnMasculino = new JRadioButton("Masculino");
 		rdbtnMasculino.setBackground(new Color(244, 164, 96));
-		rdbtnMasculino.setBounds(396, 94, 109, 23);
+		rdbtnMasculino.setBounds(281, 95, 109, 23);
+		rdbtnMasculino.setSelected(true);
 		painel_centro.add(rdbtnMasculino);
 
 		ButtonGroup bg = new ButtonGroup();
@@ -184,6 +184,13 @@ public class CadastroDeClientes extends JDialog {
 				 *       e TEL)
 				 ***/
 				Cliente cliente = new Cliente();
+				
+				if(rdbtnFeminino.isSelected() == true)	{
+					cliente.setSexo("Feminino");
+				}
+				else if(rdbtnMasculino.isSelected() == true)	{
+					cliente.setSexo("Masculino");
+				}
 
 			}
 		}
