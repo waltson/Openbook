@@ -25,7 +25,7 @@ public class PrincipalJF extends JFrame	{
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("E:\\material da faculdade\\2\u00BA semestre\\Laboratorio de programa\u00E7\u00E3o\\projeto - livraria\\logomin.fw.png"));
+		lblNewLabel.setIcon(new ImageIcon(PrincipalJF.class.getResource("/imgs/logomin.fw.png")));
 		lblNewLabel.setBounds(740, 467, 114, 62);
 		getContentPane().add(lblNewLabel);
 		setVisible(true);
@@ -60,10 +60,6 @@ public class PrincipalJF extends JFrame	{
 		mntmNovoCliente.setBackground(Color.ORANGE);
 		mnCadastro.add(mntmNovoCliente);
 		
-		JMenuItem mntmNovoFuncionario = new JMenuItem("Novo Funcionario");
-		mntmNovoFuncionario.setBackground(Color.ORANGE);
-		mnCadastro.add(mntmNovoFuncionario);
-		
 		JMenu mnProdutos = new JMenu("Produtos");
 		mnProdutos.setForeground(Color.WHITE);
 		menuBar.add(mnProdutos);
@@ -88,9 +84,9 @@ public class PrincipalJF extends JFrame	{
 		mntmNovaVenda.setBackground(Color.ORANGE);
 		mnNewMenu.add(mntmNovaVenda);
 		
-		JMenuItem mntmPromoes = new JMenuItem("Promo\u00E7\u00F5es");
-		mntmPromoes.setBackground(Color.ORANGE);
-		mnNewMenu.add(mntmPromoes);
+		JMenuItem mntmHistorico = new JMenuItem("Historico");
+		mntmHistorico.setBackground(Color.ORANGE);
+		mnNewMenu.add(mntmHistorico);
 		
 		JMenu mnClientes = new JMenu("Clientes");
 		mnClientes.setForeground(Color.WHITE);
