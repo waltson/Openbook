@@ -37,7 +37,7 @@ public class LoginJF extends JFrame	{
 		Container container = getContentPane();
 		
 		container.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		container.setBackground(new Color(255, 153, 0));
+		container.setBackground(new Color(244, 164, 96));
 		container.setLayout(null);
 		setVisible(true);
 		setSize(780,500);
@@ -83,7 +83,7 @@ public class LoginJF extends JFrame	{
 		container.add(btnEntrar);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("E:\\material da faculdade\\2\u00BA semestre\\Laboratorio de programa\u00E7\u00E3o\\projeto - livraria\\logo.fw.png"));
+		label.setIcon(new ImageIcon(LoginJF.class.getResource("/imgs/logo.fw.png")));
 		label.setBounds(10, 11, 301, 142);
 		container.add(label);
 		
