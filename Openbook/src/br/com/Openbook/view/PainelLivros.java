@@ -18,6 +18,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
 import br.com.Openbook.negocio.Livro;
+import java.awt.Color;
+import java.awt.Rectangle;
 
 public class PainelLivros extends JPanel {
 
@@ -31,16 +33,19 @@ public class PainelLivros extends JPanel {
 		tratador = new TratadorDeEventos();
 		setLayout(new BorderLayout(0, 0));
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 222, 173));
 		add(panel, BorderLayout.NORTH);
 		
 		cbCriterio = new JComboBox();
 		panel.add(cbCriterio);
 		
 		tfCriterio = new JTextField();
+		tfCriterio.setBounds(new Rectangle(35, 0, 0, 0));
 		panel.add(tfCriterio);
 		tfCriterio.setColumns(40);
 		
 		btnProcurar = new JButton("Procurar");
+		btnProcurar.setIcon(new ImageIcon(PainelLivros.class.getResource("/imgs/iconsearch.fw.png")));
 		btnProcurar.addActionListener(tratador);
 		panel.add(btnProcurar);
 		
@@ -50,6 +55,7 @@ public class PainelLivros extends JPanel {
 		
 		jtFilmes.setModel(dataModel);
 		JScrollPane scrollPane = new JScrollPane( jtFilmes );
+		scrollPane.setBackground(new Color(255, 228, 196));
 		
 		add(scrollPane, BorderLayout.CENTER);
 		
