@@ -13,6 +13,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class PrincipalJF extends JFrame	{
 	
@@ -22,12 +24,23 @@ public class PrincipalJF extends JFrame	{
 		Container container = getContentPane();
 		
 		container.setBackground(Color.WHITE);
-		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(PrincipalJF.class.getResource("/imgs/logomin.fw.png")));
-		lblNewLabel.setBounds(740, 467, 114, 62);
-		getContentPane().add(lblNewLabel);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(740)
+					.addComponent(lblNewLabel))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(467)
+					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
+		);
+		getContentPane().setLayout(groupLayout);
 		setVisible(true);
 		setSize(880,600);
 		setLocation(new Point(300, 100));

@@ -37,7 +37,7 @@ public class LoginJF extends JFrame	{
 		Container container = getContentPane();
 		
 		container.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		container.setBackground(new Color(244, 164, 96));
+		container.setBackground(new Color(255, 140, 0));
 		container.setLayout(null);
 		setVisible(true);
 		setSize(780,500);
