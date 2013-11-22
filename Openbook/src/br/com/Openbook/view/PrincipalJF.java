@@ -1,20 +1,18 @@
 package br.com.Openbook.view;
 
-
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Point;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-
-import java.awt.Color;
-
+import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JMenu;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
+import javax.swing.JTabbedPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class PrincipalJF extends JFrame	{
 	
@@ -27,25 +25,15 @@ public class PrincipalJF extends JFrame	{
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(PrincipalJF.class.getResource("/imgs/logomin.fw.png")));
-		GroupLayout groupLayout = new GroupLayout(getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(740)
-					.addComponent(lblNewLabel))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(467)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
-		);
-		getContentPane().setLayout(groupLayout);
-		setVisible(true);
-		setSize(880,600);
 		setLocation(new Point(300, 100));
 		
+		JTabbedPane abas = new JTabbedPane();
+		abas.add("Painel Livros",new PainelLivros());
+		container.add(abas);
+		
+		
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setForeground(Color.BLACK);
 		menuBar.setBackground(new Color(255, 165, 0));
 		setJMenuBar(menuBar);
 		
@@ -109,10 +97,18 @@ public class PrincipalJF extends JFrame	{
 		mntmPesquisarCliente.setBackground(Color.ORANGE);
 		mnClientes.add(mntmPesquisarCliente);
 		
+		setSize(880,600);
 	}
 	
 	
 	public static void main(String args[])	{
-		new PrincipalJF();
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException
+				| IllegalAccessException | UnsupportedLookAndFeelException e) {
+			// TODO Auto-generated catch block
+			//LOG.error(e.getMessage());
+		}
+		new PrincipalJF().setVisible(true);
 	}
 }
