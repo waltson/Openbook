@@ -19,6 +19,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 import java.awt.Point;
 
 public class LoginJF extends JFrame	{
@@ -39,9 +42,8 @@ public class LoginJF extends JFrame	{
 		container.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		container.setBackground(new Color(255, 140, 0));
 		container.setLayout(null);
-		setVisible(true);
-		setSize(780,500);
 		setLocation(new Point(300, 100));
+		
 		
 		JLabel lblBemvindo = new JLabel("Bem-Vindo!");
 		lblBemvindo.setForeground(Color.WHITE);
@@ -99,6 +101,8 @@ public class LoginJF extends JFrame	{
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
 		lblNewLabel_1.setBounds(395, 247, 375, 48);
 		container.add(lblNewLabel_1);
+		
+		setSize(780,500);
 	}
 	
 	/*
@@ -146,6 +150,7 @@ public class LoginJF extends JFrame	{
 	
 	//metodo para testar a janela; deve ser apagado no terminio do projeto
 	public static void main(String args[])	{
-		new LoginJF();
+		
+		new LoginJF().setVisible(true);
 	}
 }
