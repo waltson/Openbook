@@ -71,9 +71,9 @@ public class CadastroDeLivros extends JDialog {
 		lblNome.setBounds(21, 37, 103, 14);
 		painelCentro.add(lblNome);
 		
-		JLabel lblDurao = new JLabel("Qnt. Paginas");
-		lblDurao.setBounds(21, 131, 75, 14);
-		painelCentro.add(lblDurao);
+		JLabel lblqntPaginas = new JLabel("Qnt. Paginas");
+		lblqntPaginas.setBounds(21, 131, 75, 14);
+		painelCentro.add(lblqntPaginas);
 		
 		JLabel lblAnoDeLanamento = new JLabel("Ano de Lan\u00E7amento:");
 		lblAnoDeLanamento.setBounds(167, 131, 120, 14);
