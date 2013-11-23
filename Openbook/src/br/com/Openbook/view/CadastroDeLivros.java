@@ -36,7 +36,6 @@ public class CadastroDeLivros extends JDialog {
 	private JFormattedTextField qntPaginas;
 	private JFormattedTextField tfAnoLancamento;
 	private ManipuladorEventos meventos;
-	private JComboBox cbClassificacaoIndicativa;
 	private JButton btnSalvar;
 	private JButton btnCancelar; 
 	private JTextField tfFilmeImagem;
@@ -49,7 +48,6 @@ public class CadastroDeLivros extends JDialog {
 	private JTextField textField_2;
 	private JLabel lblGnero;
 	private JLabel lblIdioma;
-	private JLabel lblD;
 	private JLabel lblCadastroLivro;
 	
 	public CadastroDeLivros() {
@@ -57,7 +55,7 @@ public class CadastroDeLivros extends JDialog {
 		setTitle("Cadastro de Livro");
 		setResizable(false); 
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-		setSize(537,384);
+		setSize(530,357);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(new BorderLayout(0, 0));
 		
@@ -113,12 +111,8 @@ public class CadastroDeLivros extends JDialog {
 		cbIdioma.setBounds(405, 125, 106, 20);
 		painelCentro.add(cbIdioma);
 		
-		lblD = new JLabel("Classifica\u00E7\u00E3o:");
-		lblD.setBounds(254, 166, 142, 14);
-		painelCentro.add(lblD);
-		
 		JLabel lblImage = new JLabel("Image:");
-		lblImage.setBounds(20, 199, 46, 14);
+		lblImage.setBounds(238, 166, 274, 14);
 		painelCentro.add(lblImage);
 		
 		tfFilmeImagem = new JTextField();
@@ -127,7 +121,7 @@ public class CadastroDeLivros extends JDialog {
 		tfFilmeImagem.setText("<Selecione uma Imagem>");
 		tfFilmeImagem.setEditable(false);
 		tfFilmeImagem.setColumns(10);
-		tfFilmeImagem.setBounds(74, 193, 368, 20);
+		tfFilmeImagem.setBounds(292, 160, 220, 20);
 		painelCentro.add(tfFilmeImagem);
 		
 		JLabel lblAutor = new JLabel("Autor:");
