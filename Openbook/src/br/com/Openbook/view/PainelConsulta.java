@@ -1,86 +1,108 @@
 package br.com.Openbook.view;
 
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.TextArea;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
+import java.awt.Choice;
+import java.awt.Button;
 
-import br.com.Openbook.negocio.Livro;
-import java.awt.Color;
-import java.awt.Rectangle;
-
-public class PainelLivros extends JPanel {
-
-	private JTextField tfCriterio;
-	private JTable jtFilmes;
-	private JButton btnProcurar;
-	private TratadorDeEventos tratador;
-	private JComboBox cbCriterio;
+public class PainelConsulta extends JPanel {
+	private JPanel panel;
+	private JTextField textField;
+	private JTable table;
+	private Choice choice_1;
+	private JButton btnDetalhes;
+	private JButton btnPesquisar;
+	private JScrollPane scrollPane;
+	private JButton btnAtualizarInformaes;
+	private JButton btnComprar;
 	
-	public PainelLivros() {
-		tratador = new TratadorDeEventos();
-		setLayout(new BorderLayout(0, 0));
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(255, 222, 173));
-		add(panel, BorderLayout.NORTH);
-		
-		cbCriterio = new JComboBox();
-		panel.add(cbCriterio);
-		
-		tfCriterio = new JTextField();
-		tfCriterio.setBounds(new Rectangle(35, 0, 0, 0));
-		panel.add(tfCriterio);
-		tfCriterio.setColumns(40);
-		
-		btnProcurar = new JButton("Procurar");
-		btnProcurar.setIcon(new ImageIcon(PainelLivros.class.getResource("/imgs/iconsearch.fw.png")));
-		btnProcurar.addActionListener(tratador);
-		panel.add(btnProcurar);
-		
-		jtFilmes = new JTable();
-		jtFilmes.addMouseListener(tratador);
-		TableModel dataModel = new DefaultTableModel();
-		
-		jtFilmes.setModel(dataModel);
-		JScrollPane scrollPane = new JScrollPane( jtFilmes );
-		scrollPane.setBackground(new Color(255, 228, 196));
-		
-		add(scrollPane, BorderLayout.CENTER);
-		
-	}
 	
-	private class TratadorDeEventos extends MouseAdapter implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			
-			if(e.getSource() == btnProcurar){
-				
-				
-			}
-			
-		}
+	public PainelConsulta() {
+		panel = new JPanel();		
+		panel.setBackground(new Color(255, 218, 185));
+		setLayout(null);
+		panel.setBorder(BorderFactory.createTitledBorder("Consultar livro"));
+		panel.setBounds(0, 0, 862, 519);
+		add(panel);
+		panel.setLayout(null);
 		
-		@Override
-		public void mouseClicked(MouseEvent e) {
-			
-			if(e.getSource() == jtFilmes && e.getClickCount() == 2) {
-		      //codigo de pesquisa
-		   }
-		   
-		}
+		JLabel lblPesquisarLivro = new JLabel("Pesquisar Livro:");
+		lblPesquisarLivro.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblPesquisarLivro.setBounds(10, 35, 118, 33);
+		panel.add(lblPesquisarLivro);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField.setBounds(138, 35, 301, 33);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		btnPesquisar = new JButton("Pesquisar");
+		btnPesquisar.setIcon(new ImageIcon(PainelConsulta.class.getResource("/imgs/iconsearch.fw.png")));
+		btnPesquisar.setBackground(new Color(72, 209, 204));
+		btnPesquisar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnPesquisar.setBounds(712, 34, 140, 35);
+		panel.add(btnPesquisar);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 116, 562, 365);
+		panel.add(scrollPane);
+		
+		//nomes das colunas
+		String [] colunas = {
+			"Codigo",
+			"Titulo",
+			"Autor"
+		};
+		//caminho para inserir os dados
+		//a array pode ser de outro tipo
+		String dados[][] = {};
+		
+		table = new JTable(dados,colunas);
+		scrollPane.setViewportView(table);	
+		
+		JLabel lblPesquisarPor = new JLabel("Pesquisar por:");
+		lblPesquisarPor.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblPesquisarPor.setBounds(449, 40, 111, 22);
+		panel.add(lblPesquisarPor);
+		
+		choice_1 = new Choice();
+		choice_1.setForeground(new Color(105, 105, 105));
+		choice_1.setFont(new Font("Dialog", Font.PLAIN, 18));
+		choice_1.setBounds(566, 38, 126, 33);
+		choice_1.add("Codigo");
+		choice_1.add("Titulo");
+		choice_1.add("Autor");
+		choice_1.add("Preço");
+		choice_1.add("Genero");
+		panel.add(choice_1);
+		
+		btnDetalhes = new JButton("Detalhes");
+		btnDetalhes.setForeground(new Color(0, 128, 128));
+		btnDetalhes.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnDetalhes.setBounds(603, 179, 207, 54);
+		panel.add(btnDetalhes);
+		
+		btnAtualizarInformaes = new JButton("Atualizar Informa\u00E7\u00F5es");
+		btnAtualizarInformaes.setForeground(new Color(0, 128, 128));
+		btnAtualizarInformaes.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnAtualizarInformaes.setBounds(603, 286, 207, 54);
+		panel.add(btnAtualizarInformaes);
+		
+		btnComprar = new JButton("Comprar");
+		btnComprar.setForeground(new Color(0, 139, 139));
+		btnComprar.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnComprar.setBounds(603, 389, 207, 54);
+		panel.add(btnComprar);
 		
 	}
 }
