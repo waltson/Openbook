@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,16 +16,27 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.text.MaskFormatter;
 
+import org.apache.log4j.Logger;
+
+import br.com.Openbook.controller.CCadastroCliente;
 import br.com.Openbook.negocio.Cliente;
 import br.com.Openbook.negocio.Estados;
+import br.com.Openbook.negocio.UtilGui;
+
 import java.awt.Color;
 
 public class CadastroDeClientes extends JDialog {
+
+	private static Logger Log = Logger.getLogger(CadastroDeClientes.class);
 
 	private JTextField tfNome;
 	private JTextField tfEndereco;
@@ -39,6 +52,7 @@ public class CadastroDeClientes extends JDialog {
 	private JTextField tfCPF;
 	private JRadioButton rdbtnFeminino;
 	private JRadioButton rdbtnMasculino;
+	private CCadastroCliente controle;
 
 	public CadastroDeClientes() {
 		ButtonHandler buttonHandler = new ButtonHandler();
@@ -51,7 +65,8 @@ public class CadastroDeClientes extends JDialog {
 
 		JLabel lblCadastroDeClientes = new JLabel("Cadastro de Clientes");
 		lblCadastroDeClientes.setBackground(new Color(255, 127, 80));
-		lblCadastroDeClientes.setIcon(new ImageIcon(CadastroDeClientes.class.getResource("/imgs/iconnewuser.png")));
+		lblCadastroDeClientes.setIcon(new ImageIcon(CadastroDeClientes.class
+				.getResource("/imgs/iconnewuser.png")));
 
 		getContentPane().add(lblCadastroDeClientes, BorderLayout.NORTH);
 
@@ -60,7 +75,8 @@ public class CadastroDeClientes extends JDialog {
 		getContentPane().add(painel_inferior, BorderLayout.SOUTH);
 
 		btnSalvar = new JButton("Salvar");
-		btnSalvar.setIcon(new ImageIcon(CadastroDeClientes.class.getResource("/imgs/iconok.fw.png")));
+		btnSalvar.setIcon(new ImageIcon(CadastroDeClientes.class
+				.getResource("/imgs/iconok.fw.png")));
 		btnSalvar.addActionListener(buttonHandler);
 		painel_inferior.add(btnSalvar);
 
@@ -68,7 +84,8 @@ public class CadastroDeClientes extends JDialog {
 		painel_inferior.add(horizontalStrut);
 
 		btnCancelar = new JButton("Cancelar");
-		btnCancelar.setIcon(new ImageIcon(CadastroDeClientes.class.getResource("/imgs/iconcancel.fw.png")));
+		btnCancelar.setIcon(new ImageIcon(CadastroDeClientes.class
+				.getResource("/imgs/iconcancel.fw.png")));
 		btnCancelar.addActionListener(buttonHandler);
 		painel_inferior.add(btnCancelar);
 
@@ -172,6 +189,10 @@ public class CadastroDeClientes extends JDialog {
 
 	}
 
+	public void setControle(CCadastroCliente controle) {
+		this.controle = controle;
+	}
+
 	private class ButtonHandler implements ActionListener {
 
 		@Override
@@ -184,17 +205,61 @@ public class CadastroDeClientes extends JDialog {
 				 *       e TEL)
 				 ***/
 				Cliente cliente = new Cliente();
+				cliente.setNome(tfNome.getText());
+				cliente.setEndereco(tfEndereco.getText());
+				cliente.setBairro(tfBairro.getText());
+				cliente.setCidade(tfCidade.getText());
+				cliente.setCpf(tfCPF.getText());
+				cliente.setCep(tfCep.getText());
+				cliente.setTel(tfTelCel.getText());
+
+				if (rdbtnFeminino.isSelected() == true) {
+					cliente.setSexo("Feminino");
+				} else if (rdbtnMasculino.isSelected() == true) {
+					cliente.setSexo("Masculino");
+
+				}
+				if (controle.cadastrarCliente(cliente)) {
+					UtilGui.successMessage("Cliente Cadastrado!");
+					dispose();
+
+				}
+
+			} else if (e.getSource() == btnCancelar) {
+				dispose();
 
 			}
 		}
 	}
-	
-	
+
+	@Deprecated
+	public void preencherCampos() {
+		tfNome.setText("Waltson");
+		tfEndereco.setText("RUA");
+		tfBairro.setText("RUa");
+		tfCep.setText(" 888844");
+		tfCidade.setText("cidade");
+		tfCPF.setText("13425456");
+		tfTelCel.setText("11111111");
+
+	}
+
 	// @Teste #Remover na versão final
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CadastroDeClientes cadastro = new CadastroDeClientes();
+		cadastro.setControle(new CCadastroCliente());
 		cadastro.setVisible(true);
+		cadastro.preencherCampos();
+
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+		} catch (ClassNotFoundException | InstantiationException
+				| IllegalAccessException | UnsupportedLookAndFeelException e) {
+			Log.error(e.getMessage());
+
+		}
 
 	}
 }

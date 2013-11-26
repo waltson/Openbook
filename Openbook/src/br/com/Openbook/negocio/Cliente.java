@@ -7,7 +7,7 @@ public class Cliente {
 	private String endereco;
 	private String bairro;
 	private String cidade;
-	private String estado;
+	private Estados estado;
 	private String cep;
 	private String tel;
 	private String cpf;
@@ -17,7 +17,7 @@ public class Cliente {
 	}
 
 	public Cliente(String nome, String sexo, String endereco, String bairro,
-			String cidade, String estado, String cep, String tel, String cpf) {
+			String cidade, Estados estado, String cep, String tel, String cpf) {
 		super();
 		this.nome = nome;
 		this.sexo = sexo;
@@ -70,12 +70,12 @@ public class Cliente {
 		this.cidade = cidade;
 	}
 
-	public String getEstado() {
+	public Estados getEstado() {
 		return estado;
 	}
 
-	public void setEstado(String estado) {
-		this.estado = estado;
+	public void setEstado(Estados estados) {
+		this.estado = estados;
 	}
 
 	public String getCep() {
