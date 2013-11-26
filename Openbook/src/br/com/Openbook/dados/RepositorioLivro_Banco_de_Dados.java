@@ -2,12 +2,14 @@ package br.com.Openbook.dados;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import br.com.Openbook.negocio.Conexao;
-import br.com.Openbook.negocio.IRepositorioLivro;
 import br.com.Openbook.negocio.Livro;
 
-public class RepositorioLivro_Banco_de_Dados implements IRepositorioLivro {
+public class RepositorioLivro_Banco_de_Dados {
 
+	private static Logger Log = Logger.getLogger(RepositorioLivro_Banco_de_Dados.class);
 	private Conexao conn;
 
 	public RepositorioLivro_Banco_de_Dados() {
@@ -16,26 +18,24 @@ public class RepositorioLivro_Banco_de_Dados implements IRepositorioLivro {
 
 	}
 
-	@Override
 	public boolean existeLivro(String cpf) throws Exception {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public List<Livro> pesquisarLivro(String cpf) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public void cadastrarLivro(Livro novoLivro) throws Exception {
 		// TODO Auto-generated method stub
 		String sql = "";
-		sql = "INSERT INTO Openboo.Livro("
+		sql = "INSERT INTO main.Livro_Livraria("
 				+ "nome_Livro,isbn_Livro,edicao_Livro,idioma_Livro,n_pagina)"
-				+ "VALEUS(" +LivroInfo(novoLivro)+ ")";
+				+ "VALEUS(" + LivroInfo(novoLivro) + ")";
 
+		Log.debug(sql);
 		conn.executeUpdate(sql);
 
 	}
@@ -46,21 +46,9 @@ public class RepositorioLivro_Banco_de_Dados implements IRepositorioLivro {
 		saida.append("'" + livro.getIsbn() + "',");
 		saida.append("'" + livro.getEdicao() + "',");
 		saida.append("'" + livro.getIdioma() + "',");
-		saida.append("'" + livro.getNumerosPaginas() + "',");
+		saida.append("'" + livro.getNumerosPaginas() + "'");
 
 		return saida.toString();
-
-	}
-
-	@Override
-	public void atualizarLivro(Livro livro) throws Exception {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void excluirLivro(String cpf) throws Exception {
-		// TODO Auto-generated method stub
 
 	}
 
