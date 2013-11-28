@@ -212,6 +212,7 @@ public class CadastroDeClientes extends JDialog {
 				cliente.setCpf(tfCPF.getText());
 				cliente.setCep(tfCep.getText());
 				cliente.setTel(tfTelCel.getText());
+				
 
 				if (rdbtnFeminino.isSelected() == true) {
 					cliente.setSexo("Feminino");

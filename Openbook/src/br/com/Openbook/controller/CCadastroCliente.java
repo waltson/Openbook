@@ -1,13 +1,11 @@
 package br.com.Openbook.controller;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import br.com.Openbook.dados.RepositorioCliente_Banco_de_Dados;
 import br.com.Openbook.negocio.Cliente;
-import br.com.Openbook.negocio.Conexao;
 
 public class CCadastroCliente {
 

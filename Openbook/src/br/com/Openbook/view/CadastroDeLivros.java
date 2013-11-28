@@ -207,7 +207,6 @@ public class CadastroDeLivros extends JDialog {
 			if (e.getSource() == btnSalvar){
 				
 				Livro livro = new Livro();
-				
 			}
 		}
 		
