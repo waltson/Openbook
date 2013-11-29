@@ -212,29 +212,21 @@ public class CadastroDeLivros extends JDialog {
 				livro.setNomeLivro(tfNomeLivro.getText());
 				livro.setNumerosPaginas(tfQntPaginas.getText());
 
-				if (controle.cadastrarLivro(livro)) {
-					UtilGui.successMessage("Cliente Cadastrado!");
-					dispose();
-
-				}
-
-			} else if (e.getSource() == btnCancelar) {
-				dispose();
 			}
-
 		}
 
-		/**
-		 * Este método é usado apenas para testar a janela de cadastro de filmes
-		 * sem a necessidade de rodar a aplicação inteira.
-		 * 
-		 * @TODO Remover este método na versão final.
-		 */
-		public void main(String[] args) {
+	}
 
-			CadastroDeLivros cadastrarLivros = new CadastroDeLivros();
-			cadastrarLivros.preencherCampos();
-			cadastrarLivros.setVisible(true);
-		}
+	/**
+	 * Este método é usado apenas para testar a janela de cadastro de filmes sem
+	 * a necessidade de rodar a aplicação inteira.
+	 * 
+	 * @TODO Remover este método na versão final.
+	 */
+	public static void main(String[] args) {
+
+		CadastroDeLivros cadastrarLivros = new CadastroDeLivros();
+		cadastrarLivros.preencherCampos();
+		cadastrarLivros.setVisible(true);
 	}
 }
