@@ -109,36 +109,36 @@ public class CadastroDeClientes extends JDialog {
 		painel_centro.add(lblBairro);
 
 		JLabel lblCidade = new JLabel("Cidade:");
-		lblCidade.setBounds(229, 130, 57, 14);
+		lblCidade.setBounds(222, 131, 57, 14);
 		painel_centro.add(lblCidade);
 
 		tfNome = new JTextField();
-		tfNome.setBounds(75, 27, 430, 20);
+		tfNome.setBounds(75, 32, 445, 20);
 		painel_centro.add(tfNome);
 		tfNome.setColumns(10);
 
 		tfEndereco = new JTextField();
 		tfEndereco.setColumns(10);
-		tfEndereco.setBounds(75, 61, 430, 20);
+		tfEndereco.setBounds(75, 66, 445, 20);
 		painel_centro.add(tfEndereco);
 
 		tfBairro = new JTextField();
 		tfBairro.setColumns(10);
-		tfBairro.setBounds(75, 129, 144, 20);
+		tfBairro.setBounds(75, 134, 144, 20);
 		painel_centro.add(tfBairro);
 
 		tfCidade = new JTextField();
 		tfCidade.setColumns(10);
-		tfCidade.setBounds(281, 128, 102, 20);
+		tfCidade.setBounds(269, 131, 102, 20);
 		painel_centro.add(tfCidade);
 
 		JLabel lblEstado = new JLabel("Estado:");
-		lblEstado.setBounds(396, 131, 58, 14);
+		lblEstado.setBounds(375, 131, 48, 14);
 		painel_centro.add(lblEstado);
 		/** @TODO Colocar genérico */
 		cbEstado = new JComboBox(Estados.values());
 
-		cbEstado.setBounds(447, 127, 58, 20);
+		cbEstado.setBounds(420, 128, 100, 20);
 		painel_centro.add(cbEstado);
 
 		JLabel lblCep = new JLabel("Cep:");
@@ -147,16 +147,16 @@ public class CadastroDeClientes extends JDialog {
 
 		tfCep = new JTextField();
 		tfCep.setColumns(10);
-		tfCep.setBounds(75, 163, 144, 20);
+		tfCep.setBounds(75, 168, 144, 20);
 		painel_centro.add(tfCep);
 
 		JLabel lblTelefone = new JLabel("Tel/Cel:");
-		lblTelefone.setBounds(229, 169, 57, 14);
+		lblTelefone.setBounds(222, 169, 57, 14);
 		painel_centro.add(lblTelefone);
 
 		tfTelCel = new JTextField();
 		tfTelCel.setColumns(10);
-		tfTelCel.setBounds(281, 166, 102, 20);
+		tfTelCel.setBounds(269, 163, 102, 20);
 		painel_centro.add(tfTelCel);
 
 		JLabel lblCpf = new JLabel("CPF:");
@@ -165,21 +165,21 @@ public class CadastroDeClientes extends JDialog {
 
 		tfCPF = new JTextField();
 		tfCPF.setColumns(10);
-		tfCPF.setBounds(75, 95, 144, 20);
+		tfCPF.setBounds(75, 100, 144, 20);
 		painel_centro.add(tfCPF);
 
 		JLabel lblSexo = new JLabel("Sexo:");
-		lblSexo.setBounds(237, 98, 57, 14);
+		lblSexo.setBounds(222, 97, 41, 14);
 		painel_centro.add(lblSexo);
 
 		rdbtnFeminino = new JRadioButton("Feminino");
 		rdbtnFeminino.setBackground(new Color(244, 164, 96));
-		rdbtnFeminino.setBounds(377, 95, 80, 23);
+		rdbtnFeminino.setBounds(363, 93, 80, 23);
 		painel_centro.add(rdbtnFeminino);
 
 		rdbtnMasculino = new JRadioButton("Masculino");
 		rdbtnMasculino.setBackground(new Color(244, 164, 96));
-		rdbtnMasculino.setBounds(281, 95, 109, 23);
+		rdbtnMasculino.setBounds(267, 93, 109, 23);
 		rdbtnMasculino.setSelected(true);
 		painel_centro.add(rdbtnMasculino);
 
@@ -205,7 +205,7 @@ public class CadastroDeClientes extends JDialog {
 				 *       e TEL)
 				 ***/
 				Cliente cliente = new Cliente();
-<<<<<<< HEAD
+//<<<<<<< HEAD
 				
 				if(rdbtnFeminino.isSelected() == true)	{
 					cliente.setSexo("Feminino");
@@ -213,7 +213,7 @@ public class CadastroDeClientes extends JDialog {
 				else if(rdbtnMasculino.isSelected() == true)	{
 					cliente.setSexo("Masculino");
 				}
-=======
+//=======
 				cliente.setNome(tfNome.getText());
 				cliente.setEndereco(tfEndereco.getText());
 				cliente.setBairro(tfBairro.getText());
@@ -237,7 +237,7 @@ public class CadastroDeClientes extends JDialog {
 
 			} else if (e.getSource() == btnCancelar) {
 				dispose();
->>>>>>> branch 'master' of https://github.com/waltson/Openbook.git
+//>>>>>>> branch 'master' of https://github.com/waltson/Openbook.git
 
 			}
 		}
