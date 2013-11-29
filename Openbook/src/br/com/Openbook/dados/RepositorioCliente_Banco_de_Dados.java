@@ -1,14 +1,17 @@
 package br.com.Openbook.dados;
 
+import java.sql.SQLException;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 
 import br.com.Openbook.negocio.Cliente;
 import br.com.Openbook.negocio.Conexao;
-import br.com.Openbook.negocio.IRepositorioCliente;
 import br.com.Openbook.negocio.Livro;
 
-public class RepositorioCliente_Banco_de_Dados implements IRepositorioCliente {
+public class RepositorioCliente_Banco_de_Dados{
 
+	private static Logger Log = Logger.getLogger(RepositorioCliente_Banco_de_Dados.class);
 	private Conexao con;
 
 	public RepositorioCliente_Banco_de_Dados() {
@@ -17,22 +20,28 @@ public class RepositorioCliente_Banco_de_Dados implements IRepositorioCliente {
 
 	}
 
-	@Override
 	public List<Cliente> pesquisarCliente(String cpf) throws Exception {
+
 		// TODO Auto-generated method stub
+		
+		
+		
+		
 		boolean retorno = false;
 
 		return null;
 	}
 
-	@Override
-	public void cadastrarCliente(Cliente novoCliente) throws Exception {
+	public void cadastrarCliente(Cliente cliente) throws SQLException {
 		// TODO Auto-generated method stub
+		
+		
 		String sql = "";
-		sql = "INSERT INTO Openbook.Cliente("
+		sql = "INSERT INTO main.Cliente_Livraria("
 				+ "nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)"
-				+ "VALEUS(" + ClienteInfo(novoCliente) + ");";
+				+ "VALUES(" + ClienteInfo(cliente) + ")";
 
+		Log.debug(sql);
 		con.executeUpdate(sql);
 
 	}
@@ -47,27 +56,20 @@ public class RepositorioCliente_Banco_de_Dados implements IRepositorioCliente {
 		saida.append("'" + cliente.getCep() + "',");
 		saida.append("'" + cliente.getTel() + "',");
 		saida.append("'" + cliente.getCpf() + "',");
-		saida.append("'" + cliente.getSexo() + "',");
+		saida.append("'" + cliente.getSexo() + "'");
 		return saida.toString();
 
 	}
 
-	@Override
 	public boolean existeCliente(String cpf) throws Exception {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
-	public void atualizarCliente(Cliente cliente) throws Exception {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void excluirCliente(String cpf) throws Exception {
-		// TODO Auto-generated method stub
-
+	
+	protected void finalize() throws Throwable {
+		con.closeDB();
+		super.finalize();
 	}
 
 }

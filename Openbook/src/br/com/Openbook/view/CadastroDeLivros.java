@@ -22,15 +22,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import org.apache.log4j.Logger;
 import org.w3c.dom.events.MouseEvent;
 
+import br.com.Openbook.controller.CCadastroLivro;
 import br.com.Openbook.negocio.Genero;
 import br.com.Openbook.negocio.Livro;
+
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+
 import java.awt.FlowLayout;
 
 public class CadastroDeLivros extends JDialog {
+	
+	private static Logger Log = Logger.getLogger(CadastroDeLivros.class);
 	
 	private JTextField tfTituloOriginal;
 	private JFormattedTextField qntPaginas;
@@ -49,7 +55,7 @@ public class CadastroDeLivros extends JDialog {
 	private JLabel lblGnero;
 	private JLabel lblIdioma;
 	private JLabel lblCadastroLivro;
-	
+	private CCadastroLivro controle;
 	public CadastroDeLivros() {
 		
 		setTitle("Cadastro de Livro");
@@ -174,6 +180,11 @@ public class CadastroDeLivros extends JDialog {
 		btnCancelar.addActionListener(meventos);
 		painelInferior.add(btnCancelar);
 		// TODO Auto-generated constructor stub
+		
+	}
+
+	public void setControle(CCadastroLivro controle) {
+		this.controle = controle;
 	}
 
 	@Deprecated
@@ -187,7 +198,10 @@ public class CadastroDeLivros extends JDialog {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
+			if (e.getSource() == btnSalvar){
+				
+				Livro livro = new Livro();
+			}
 		}
 		
 	}
