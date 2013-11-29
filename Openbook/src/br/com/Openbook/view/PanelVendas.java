@@ -16,7 +16,7 @@ public class PanelVendas extends JPanel {
 	private JTextField tfAutor;
 	private JTextField tfQntPaginas;
 	private JTextField tfUnidades;
-	private JTextField textField;
+	private JTextField tfCliente;
 	private JButton btnCancelarCompra;
 	private JButton btnTiposDePagamento;
 	
@@ -95,11 +95,11 @@ public class PanelVendas extends JPanel {
 		lblCliente.setBounds(10, 51, 66, 26);
 		panel.add(lblCliente);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		textField.setBounds(75, 50, 391, 34);
-		panel.add(textField);
-		textField.setColumns(10);
+		tfCliente = new JTextField();
+		tfCliente.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		tfCliente.setBounds(75, 50, 391, 34);
+		panel.add(tfCliente);
+		tfCliente.setColumns(10);
 		
 		JButton btnComprar = new JButton("Comprar");
 		btnComprar.setForeground(new Color(0, 139, 139));
@@ -118,5 +118,7 @@ public class PanelVendas extends JPanel {
 		btnTiposDePagamento.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnTiposDePagamento.setBounds(524, 105, 306, 59);
 		panel.add(btnTiposDePagamento);
+		
+		setSize(862, 519);
 	}
 }

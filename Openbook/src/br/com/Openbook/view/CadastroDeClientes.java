@@ -156,7 +156,7 @@ public class CadastroDeClientes extends JDialog {
 
 		tfTelCel = new JTextField();
 		tfTelCel.setColumns(10);
-		tfTelCel.setBounds(269, 163, 102, 20);
+		tfTelCel.setBounds(269, 166, 102, 20);
 		painel_centro.add(tfTelCel);
 
 		JLabel lblCpf = new JLabel("CPF:");

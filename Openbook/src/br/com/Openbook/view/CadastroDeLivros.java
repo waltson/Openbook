@@ -38,8 +38,8 @@ public class CadastroDeLivros extends JDialog {
 	
 	private static Logger Log = Logger.getLogger(CadastroDeLivros.class);
 	
-	private JTextField tfTituloOriginal;
-	private JFormattedTextField qntPaginas;
+	private JTextField tfNomeLivro;
+	private JFormattedTextField tfQntPaginas;
 	private JFormattedTextField tfAnoLancamento;
 	private ManipuladorEventos meventos;
 	private JButton btnSalvar;
@@ -47,11 +47,11 @@ public class CadastroDeLivros extends JDialog {
 	private JTextField tfFilmeImagem;
 	private JComboBox cbIdioma;
 	private JComboBox cbGenero;
-	private JTextField textField;
+	private JTextField tfAutor;
 	private JLabel lblPreo;
-	private JTextField textField_1;
+	private JTextField tfPreco;
 	private JLabel lblIsb;
-	private JTextField textField_2;
+	private JTextField tfIsbn;
 	private JLabel lblGnero;
 	private JLabel lblIdioma;
 	private JLabel lblCadastroLivro;
@@ -85,15 +85,15 @@ public class CadastroDeLivros extends JDialog {
 		lblAnoDeLanamento.setBounds(167, 131, 120, 14);
 		painelCentro.add(lblAnoDeLanamento);
 		
-		tfTituloOriginal = new JTextField();
-		tfTituloOriginal.setBounds(107, 31, 405, 20);
-		painelCentro.add(tfTituloOriginal);
-		tfTituloOriginal.setColumns(10);
+		tfNomeLivro = new JTextField();
+		tfNomeLivro.setBounds(107, 31, 405, 20);
+		painelCentro.add(tfNomeLivro);
+		tfNomeLivro.setColumns(10);
 		
-		qntPaginas = new JFormattedTextField();
-		qntPaginas.setBounds(106, 125, 46, 20);
-		painelCentro.add(qntPaginas);
-		qntPaginas.setColumns(10);
+		tfQntPaginas = new JFormattedTextField();
+		tfQntPaginas.setBounds(106, 125, 46, 20);
+		painelCentro.add(tfQntPaginas);
+		tfQntPaginas.setColumns(10);
 		
 		tfAnoLancamento = new JFormattedTextField();
 		tfAnoLancamento.setColumns(10);
@@ -134,28 +134,28 @@ public class CadastroDeLivros extends JDialog {
 		lblAutor.setBounds(21, 67, 46, 14);
 		painelCentro.add(lblAutor);
 		
-		textField = new JTextField();
-		textField.setBounds(107, 64, 404, 20);
-		painelCentro.add(textField);
-		textField.setColumns(10);
+		tfAutor = new JTextField();
+		tfAutor.setBounds(107, 64, 404, 20);
+		painelCentro.add(tfAutor);
+		tfAutor.setColumns(10);
 		
 		lblPreo = new JLabel("Pre\u00E7o:");
 		lblPreo.setBounds(21, 98, 46, 14);
 		painelCentro.add(lblPreo);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(107, 95, 86, 20);
-		painelCentro.add(textField_1);
-		textField_1.setColumns(10);
+		tfPreco = new JTextField();
+		tfPreco.setBounds(107, 95, 86, 20);
+		painelCentro.add(tfPreco);
+		tfPreco.setColumns(10);
 		
 		lblIsb = new JLabel("ISBN");
-		lblIsb.setBounds(254, 95, 46, 14);
+		lblIsb.setBounds(217, 95, 46, 14);
 		painelCentro.add(lblIsb);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(310, 95, 104, 20);
-		painelCentro.add(textField_2);
-		textField_2.setColumns(10);		
+		tfIsbn = new JTextField();
+		tfIsbn.setBounds(284, 95, 104, 20);
+		painelCentro.add(tfIsbn);
+		tfIsbn.setColumns(10);		
 		
 		lblCadastroLivro = new JLabel("Cadastro Livro");
 		lblCadastroLivro.setBackground(new Color(255, 140, 0));

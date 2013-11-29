@@ -26,6 +26,7 @@ public class PrincipalJF extends JFrame	{
 		
 		JTabbedPane abas = new JTabbedPane();
 		abas.setBackground(new Color(233, 150, 122));
+		abas.add("Home", new PainelHome());
 		abas.add("Vendas",new PanelVendas());
 		abas.add("Consultar Livro",new PainelConsulta());
 		abas.add("Historico", new PanelHistorico());

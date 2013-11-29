@@ -16,11 +16,11 @@ import javax.swing.ImageIcon;
 public class PanelHistorico extends JPanel	{
 	
 	private JPanel panel;
-	private JTextField textField;
+	private JTextField tfPesquisa;
 	private final JButton btnProcurar = new JButton("Procurar");
 	private JScrollPane scrollPane;
 	private JTable table;
-	private Choice choice;
+	private Choice chTipoPesquisa;
 	
 	public PanelHistorico() {
 		panel = new JPanel();		
@@ -31,21 +31,21 @@ public class PanelHistorico extends JPanel	{
 		add(panel);
 		panel.setLayout(null);
 		
-		choice = new Choice();
-		choice.setForeground(new Color(0, 139, 139));
-		choice.setFont(new Font("Dialog", Font.PLAIN, 16));
-		choice.setBounds(23, 38, 131, 20);
-		choice.add("Cliente");
-		choice.add("Vendas");
-		choice.add("Transações");
-		choice.add("Cacastros");
-		choice.add("Codigo");
-		panel.add(choice);
+		chTipoPesquisa = new Choice();
+		chTipoPesquisa.setForeground(new Color(0, 139, 139));
+		chTipoPesquisa.setFont(new Font("Dialog", Font.PLAIN, 16));
+		chTipoPesquisa.setBounds(23, 38, 131, 20);
+		chTipoPesquisa.add("Cliente");
+		chTipoPesquisa.add("Vendas");
+		chTipoPesquisa.add("Transações");
+		chTipoPesquisa.add("Cacastros");
+		chTipoPesquisa.add("Codigo");
+		panel.add(chTipoPesquisa);
 		
-		textField = new JTextField();
-		textField.setBounds(192, 38, 446, 27);
-		panel.add(textField);
-		textField.setColumns(10);
+		tfPesquisa = new JTextField();
+		tfPesquisa.setBounds(192, 38, 446, 27);
+		panel.add(tfPesquisa);
+		tfPesquisa.setColumns(10);
 		btnProcurar.setIcon(new ImageIcon(PanelHistorico.class.getResource("/imgs/iconsearch.fw.png")));
 		btnProcurar.setForeground(new Color(0, 139, 139));
 		btnProcurar.setFont(new Font("Tahoma", Font.PLAIN, 16));
