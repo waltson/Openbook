@@ -81,3 +81,6 @@ DEBUG 00:09:18 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,enderec
 DEBUG 00:11:58 [AWT-EventQueue-0] Cadastro Cliente:
 br.com.Openbook.negocio.Cliente@38c8c5 - (CCadastroCliente.java:30)
 DEBUG 00:11:58 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','null',' 888844','11111111','13425456','Feminino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 14:08:01 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@b0a518 - (CCadastroCliente.java:30)
+DEBUG 14:08:02 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','null',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
