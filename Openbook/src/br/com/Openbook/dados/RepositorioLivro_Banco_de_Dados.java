@@ -9,7 +9,8 @@ import br.com.Openbook.negocio.Livro;
 
 public class RepositorioLivro_Banco_de_Dados {
 
-	private static Logger Log = Logger.getLogger(RepositorioLivro_Banco_de_Dados.class);
+	private static Logger Log = Logger
+			.getLogger(RepositorioLivro_Banco_de_Dados.class);
 	private Conexao conn;
 
 	public RepositorioLivro_Banco_de_Dados() {
@@ -32,7 +33,7 @@ public class RepositorioLivro_Banco_de_Dados {
 		// TODO Auto-generated method stub
 		String sql = "";
 		sql = "INSERT INTO main.Livro_Livraria("
-				+ "nome_Livro,isbn_Livro,edicao_Livro,idioma_Livro,n_pagina)"
+				+ "nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina, preco_livro)"
 				+ "VALEUS(" + LivroInfo(novoLivro) + ")";
 
 		Log.debug(sql);
@@ -46,7 +47,9 @@ public class RepositorioLivro_Banco_de_Dados {
 		saida.append("'" + livro.getIsbn() + "',");
 		saida.append("'" + livro.getEdicao() + "',");
 		saida.append("'" + livro.getIdioma() + "',");
-		saida.append("'" + livro.getNumerosPaginas() + "'");
+		saida.append("" + livro.getGenero() + "',");
+		saida.append("'" + livro.getNumerosPaginas() + "',");
+		saida.append("" + livro.getPreco() + "'");
 
 		return saida.toString();
 
