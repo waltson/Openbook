@@ -85,6 +85,7 @@ public class PrincipalJF extends JFrame	{
 		mntmHistorico.setBackground(Color.ORANGE);
 		mnNewMenu.add(mntmHistorico);
 		
+		setLocation(250,100);
 		setSize(880,600);
 	}
 	
