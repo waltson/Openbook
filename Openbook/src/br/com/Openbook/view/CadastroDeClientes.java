@@ -205,23 +205,23 @@ public class CadastroDeClientes extends JDialog {
 				 *       e TEL)
 				 ***/
 				Cliente cliente = new Cliente();
-//<<<<<<< HEAD
-				
-				if(rdbtnFeminino.isSelected() == true)	{
+				// <<<<<<< HEAD
+
+				if (rdbtnFeminino.isSelected() == true) {
 					cliente.setSexo("Feminino");
-				}
-				else if(rdbtnMasculino.isSelected() == true)	{
+				} else if (rdbtnMasculino.isSelected() == true) {
 					cliente.setSexo("Masculino");
 				}
-//=======
+				// =======
 				cliente.setNome(tfNome.getText());
 				cliente.setEndereco(tfEndereco.getText());
 				cliente.setBairro(tfBairro.getText());
 				cliente.setCidade(tfCidade.getText());
+				cliente.setEstado(Estados.valueOf(cbEstado.getSelectedItem()
+						.toString()));
 				cliente.setCpf(tfCPF.getText());
 				cliente.setCep(tfCep.getText());
 				cliente.setTel(tfTelCel.getText());
-				
 
 				if (rdbtnFeminino.isSelected() == true) {
 					cliente.setSexo("Feminino");
@@ -237,7 +237,8 @@ public class CadastroDeClientes extends JDialog {
 
 			} else if (e.getSource() == btnCancelar) {
 				dispose();
-//>>>>>>> branch 'master' of https://github.com/waltson/Openbook.git
+				// >>>>>>> branch 'master' of
+				// https://github.com/waltson/Openbook.git
 
 			}
 		}

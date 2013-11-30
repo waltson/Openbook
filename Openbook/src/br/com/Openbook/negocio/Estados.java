@@ -2,7 +2,7 @@ package br.com.Openbook.negocio;
 
 
 public enum Estados {
-	 AC("Acre"),  
+	 	AC("Acre"),  
 	    AL("Alagoas"),  
 	    AM("Amazonas"),  
 	    AP("Amapá"),  
