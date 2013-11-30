@@ -1,6 +1,5 @@
 package br.com.Openbook.negocio;
 
-
 public enum Estados {
 	 	AC("Acre"),  
 	    AL("Alagoas"),  
@@ -61,5 +60,17 @@ public enum Estados {
 	        return estado;  
 	    }  
 
-
+	    
+	    public static Estados getValueOf(String str){
+	    	Estados[] ci = values();
+	    	Estados ret = null;
+		    	 for (int i = 0; i < ci.length; i++) {
+		    		 if(str.equalsIgnoreCase(ci[i].toString()))
+		    		{
+		    			 ret= ci[i];
+		    			 break;
+		    		}
+		    	 }
+				return ret;
+		    }
 }

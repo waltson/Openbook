@@ -110,3 +110,76 @@ ERROR 21:06:08 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not 
 DEBUG 21:06:17 [AWT-EventQueue-0] Cadastro Cliente:
 br.com.Openbook.negocio.Cliente@1adff28 - (CCadastroCliente.java:30)
 DEBUG 21:06:17 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','null',' 888844','11111111','12','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 10:46:58 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1c6cc9c - (CCadastroCliente.java:30)
+DEBUG 10:46:58 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 10:46:58 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:38)
+DEBUG 10:49:39 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@125c99f - (CCadastroCliente.java:31)
+DEBUG 10:49:39 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 10:49:42 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:11:56 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d7e64f - (CCadastroCliente.java:31)
+DEBUG 11:11:56 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:11:58 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:12:22 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d7e64f - (CCadastroCliente.java:31)
+DEBUG 11:12:22 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:12:29 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:12:46 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@19846fd - (CCadastroCliente.java:31)
+DEBUG 11:12:46 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:12:47 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:12:59 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d7e64f - (CCadastroCliente.java:31)
+DEBUG 11:12:59 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:13:00 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:13:11 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@12a2259 - (CCadastroCliente.java:31)
+DEBUG 11:13:11 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425455','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:14:09 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@125c99f - (CCadastroCliente.java:31)
+DEBUG 11:14:09 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:14:11 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:14:52 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d1c817 - (CCadastroCliente.java:31)
+DEBUG 11:14:52 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:14:53 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:15:31 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@190364c - (CCadastroCliente.java:31)
+DEBUG 11:15:31 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:16:52 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d7e64f - (CCadastroCliente.java:31)
+DEBUG 11:16:52 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:17:58 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@dcbe88 - (CCadastroCliente.java:31)
+DEBUG 11:17:58 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:18:54 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@3af722 - (CCadastroCliente.java:31)
+DEBUG 11:18:54 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:20:33 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1a76931 - (CCadastroCliente.java:31)
+DEBUG 11:20:33 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:20:50 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1d1c817 - (CCadastroCliente.java:31)
+DEBUG 11:20:50 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:21:07 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@610faf - (CCadastroCliente.java:31)
+DEBUG 11:21:07 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:21:22 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@610faf - (CCadastroCliente.java:31)
+DEBUG 11:21:22 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:26:09 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@125c99f - (CCadastroCliente.java:31)
+DEBUG 11:26:09 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:26:10 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:26:13 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@9ff588 - (CCadastroCliente.java:31)
+DEBUG 11:26:13 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425458','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 11:26:48 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@125c99f - (CCadastroCliente.java:31)
+DEBUG 11:26:48 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 11:26:49 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:41)
+DEBUG 11:26:52 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@1664f1a - (CCadastroCliente.java:31)
+DEBUG 11:26:52 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','1342545687','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)

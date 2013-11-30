@@ -4,13 +4,15 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-
-public class UtilGui {
-	private static Icon successIcon = new ImageIcon("ic_msg_success.png");
-	private static Icon errorIcon = new ImageIcon("ic_msg_error.png");
+//Não permite que esta classe seja herdada
+public final class UtilGui {
 	
-	public UtilGui() {
-		// TODO Auto-generated constructor stub
+	private static Icon successIcon = new ImageIcon(UtilGui.class.getResource("/imgs/ic_msg_success.png"));
+	private static Icon errorIcon = new ImageIcon(UtilGui.class.getResource("/imgs/ic_msg_error.png"));
+	
+	//Não permite que esta classe seja criada.
+	private UtilGui() {
+	
 	}
 	
 	public final static void successMessage(String message){

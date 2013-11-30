@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import br.com.Openbook.dados.RepositorioCliente_Banco_de_Dados;
 import br.com.Openbook.negocio.Cliente;
+import br.com.Openbook.negocio.UtilGui;
 
 public class CCadastroCliente {
 
@@ -35,6 +36,8 @@ public class CCadastroCliente {
 					rs = true;
 
 				} catch (Exception e) {
+					
+					UtilGui.errorMessage("Erro ao Cadastar o Cliente: "+e.getMessage());
 					Log.error("Erro ao Cadastrar o Cliente " + e.getMessage());
 
 				}
