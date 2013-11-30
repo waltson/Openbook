@@ -173,7 +173,6 @@ public class CadastroDeLivros extends JDialog {
 	}
 
 	@Deprecated
-
 	public void preencherCampos() {
 		tfNomeLivro.setText("causa");
 		tfQntPaginas.setText("9090");
@@ -198,7 +197,8 @@ public class CadastroDeLivros extends JDialog {
 				livro.setIsbn(tfIsbn.getText());
 				livro.setPreco(preco);
 				livro.setIdioma(cbIdioma.getSelectedItem() + "");
-				// livro.setGenero(Genero.valueOf(cbGenero.getSelectedItem().toString()));
+				livro.setGenero(Genero.getValueOf(cbGenero.getSelectedItem()
+						.toString()));
 
 				if (controle.cadastrarLivro(livro)) {
 					UtilGui.successMessage("Livro Cadastrado!");
@@ -224,7 +224,7 @@ public class CadastroDeLivros extends JDialog {
 		cadastrarLivros.setControle(new CCadastroLivro());
 		cadastrarLivros.preencherCampos();
 		cadastrarLivros.setVisible(true);
-		
+
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
