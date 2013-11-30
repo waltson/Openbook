@@ -45,10 +45,8 @@ public class CadastroDeLivros extends JDialog {
 	private ManipuladorEventos meventos;
 	private JButton btnSalvar;
 	private JButton btnCancelar;
-	private JTextField tfFilmeImagem;
 	private JComboBox cbIdioma;
 	private JComboBox cbGenero;
-	private JTextField tfAutor;
 	private JLabel lblPreo;
 	private JTextField tfPreco;
 	private JLabel lblIsb;
@@ -81,11 +79,11 @@ public class CadastroDeLivros extends JDialog {
 		painelCentro.add(lblNome);
 
 		JLabel lblqntPaginas = new JLabel("Qnt. Paginas");
-		lblqntPaginas.setBounds(21, 131, 75, 14);
+		lblqntPaginas.setBounds(20, 128, 75, 14);
 		painelCentro.add(lblqntPaginas);
 
 		JLabel lblAnoDeLanamento = new JLabel("Ano de Lan\u00E7amento:");
-		lblAnoDeLanamento.setBounds(167, 131, 120, 14);
+		lblAnoDeLanamento.setBounds(166, 128, 120, 14);
 		painelCentro.add(lblAnoDeLanamento);
 
 		tfNomeLivro = new JTextField();
@@ -94,13 +92,13 @@ public class CadastroDeLivros extends JDialog {
 		tfNomeLivro.setColumns(10);
 
 		tfQntPaginas = new JFormattedTextField();
-		tfQntPaginas.setBounds(106, 125, 46, 20);
+		tfQntPaginas.setBounds(105, 122, 46, 20);
 		painelCentro.add(tfQntPaginas);
 		tfQntPaginas.setColumns(10);
 
 		tfAnoLancamento = new JFormattedTextField();
 		tfAnoLancamento.setColumns(10);
-		tfAnoLancamento.setBounds(285, 125, 59, 20);
+		tfAnoLancamento.setBounds(284, 122, 59, 20);
 		painelCentro.add(tfAnoLancamento);
 
 		cbGenero = new JComboBox(Genero.values());
@@ -112,51 +110,29 @@ public class CadastroDeLivros extends JDialog {
 		painelCentro.add(lblGnero);
 
 		lblIdioma = new JLabel("Idioma:");
-		lblIdioma.setBounds(354, 131, 60, 14);
+		lblIdioma.setBounds(284, 163, 46, 14);
 		painelCentro.add(lblIdioma);
 
 		String idiomas[] = { "Português", "Inglês" };
 		cbIdioma = new JComboBox(idiomas);
-		cbIdioma.setBounds(405, 125, 106, 20);
+		cbIdioma.setBounds(335, 160, 106, 20);
 		painelCentro.add(cbIdioma);
 
-		JLabel lblImage = new JLabel("Image:");
-		lblImage.setBounds(238, 166, 274, 14);
-		painelCentro.add(lblImage);
-
-		tfFilmeImagem = new JTextField();
-		tfFilmeImagem.setBackground(Color.WHITE);
-		// tfFilmeImagem.addMouseListener(meventos);
-		tfFilmeImagem.setText("<Selecione uma Imagem>");
-		tfFilmeImagem.setEditable(false);
-		tfFilmeImagem.setColumns(10);
-		tfFilmeImagem.setBounds(292, 160, 220, 20);
-		painelCentro.add(tfFilmeImagem);
-
-		JLabel lblAutor = new JLabel("Autor:");
-		lblAutor.setBounds(21, 67, 46, 14);
-		painelCentro.add(lblAutor);
-
-		tfAutor = new JTextField();
-		tfAutor.setBounds(107, 64, 404, 20);
-		painelCentro.add(tfAutor);
-		tfAutor.setColumns(10);
-
 		lblPreo = new JLabel("Pre\u00E7o:");
-		lblPreo.setBounds(21, 98, 46, 14);
+		lblPreo.setBounds(21, 81, 46, 14);
 		painelCentro.add(lblPreo);
 
 		tfPreco = new JTextField();
-		tfPreco.setBounds(107, 95, 86, 20);
+		tfPreco.setBounds(107, 78, 86, 20);
 		painelCentro.add(tfPreco);
 		tfPreco.setColumns(10);
 
 		lblIsb = new JLabel("ISBN");
-		lblIsb.setBounds(217, 95, 46, 14);
+		lblIsb.setBounds(217, 78, 46, 14);
 		painelCentro.add(lblIsb);
 
 		tfIsbn = new JTextField();
-		tfIsbn.setBounds(284, 95, 104, 20);
+		tfIsbn.setBounds(284, 78, 104, 20);
 		painelCentro.add(tfIsbn);
 		tfIsbn.setColumns(10);
 
@@ -195,7 +171,6 @@ public class CadastroDeLivros extends JDialog {
 
 	@Deprecated
 	public void preencherCampos() {
-		tfFilmeImagem.setText("Nenhuma imagem selecionada");
 		tfNomeLivro.setText("causa");
 		tfQntPaginas.setText("9090");
 
