@@ -217,8 +217,8 @@ public class CadastroDeClientes extends JDialog {
 				cliente.setEndereco(tfEndereco.getText());
 				cliente.setBairro(tfBairro.getText());
 				cliente.setCidade(tfCidade.getText());
-				cliente.setEstado(Estados.getValueOf(cbEstado.getSelectedItem()
-						.toString()));
+				/*cliente.setEstado(Estados.valueOf(cbEstado.getSelectedItem()
+						.toString()));*/
 				cliente.setCpf(tfCPF.getText());
 				cliente.setCep(tfCep.getText());
 				cliente.setTel(tfTelCel.getText());

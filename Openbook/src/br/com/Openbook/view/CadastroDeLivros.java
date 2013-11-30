@@ -21,8 +21,11 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import org.apache.log4j.Logger;
+import org.w3c.dom.CDATASection;
 import org.w3c.dom.events.MouseEvent;
 
 import br.com.Openbook.controller.CCadastroLivro;
@@ -41,7 +44,6 @@ public class CadastroDeLivros extends JDialog {
 
 	private JTextField tfNomeLivro;
 	private JFormattedTextField tfQntPaginas;
-	private JFormattedTextField tfAnoLancamento;
 	private ManipuladorEventos meventos;
 	private JButton btnSalvar;
 	private JButton btnCancelar;
@@ -55,6 +57,7 @@ public class CadastroDeLivros extends JDialog {
 	private JLabel lblIdioma;
 	private JLabel lblCadastroLivro;
 	private CCadastroLivro controle;
+	private JTextField tfEdicao;
 
 	public CadastroDeLivros() {
 
@@ -82,10 +85,6 @@ public class CadastroDeLivros extends JDialog {
 		lblqntPaginas.setBounds(20, 128, 75, 14);
 		painelCentro.add(lblqntPaginas);
 
-		JLabel lblAnoDeLanamento = new JLabel("Ano de Lan\u00E7amento:");
-		lblAnoDeLanamento.setBounds(166, 128, 120, 14);
-		painelCentro.add(lblAnoDeLanamento);
-
 		tfNomeLivro = new JTextField();
 		tfNomeLivro.setBounds(107, 31, 405, 20);
 		painelCentro.add(tfNomeLivro);
@@ -95,11 +94,6 @@ public class CadastroDeLivros extends JDialog {
 		tfQntPaginas.setBounds(105, 122, 46, 20);
 		painelCentro.add(tfQntPaginas);
 		tfQntPaginas.setColumns(10);
-
-		tfAnoLancamento = new JFormattedTextField();
-		tfAnoLancamento.setColumns(10);
-		tfAnoLancamento.setBounds(284, 122, 59, 20);
-		painelCentro.add(tfAnoLancamento);
 
 		cbGenero = new JComboBox(Genero.values());
 		cbGenero.setBounds(76, 160, 157, 20);
@@ -128,13 +122,22 @@ public class CadastroDeLivros extends JDialog {
 		tfPreco.setColumns(10);
 
 		lblIsb = new JLabel("ISBN");
-		lblIsb.setBounds(217, 78, 46, 14);
+		lblIsb.setBounds(243, 81, 46, 14);
 		painelCentro.add(lblIsb);
 
 		tfIsbn = new JTextField();
 		tfIsbn.setBounds(284, 78, 104, 20);
 		painelCentro.add(tfIsbn);
 		tfIsbn.setColumns(10);
+
+		tfEdicao = new JTextField();
+		tfEdicao.setBounds(284, 122, 86, 20);
+		painelCentro.add(tfEdicao);
+		tfEdicao.setColumns(10);
+
+		JLabel lblEdicao = new JLabel("Edi\u00E7\u00E3o:");
+		lblEdicao.setBounds(228, 128, 46, 14);
+		painelCentro.add(lblEdicao);
 
 		lblCadastroLivro = new JLabel("Cadastro Livro");
 		lblCadastroLivro.setBackground(new Color(255, 140, 0));
@@ -170,9 +173,13 @@ public class CadastroDeLivros extends JDialog {
 	}
 
 	@Deprecated
+
 	public void preencherCampos() {
 		tfNomeLivro.setText("causa");
 		tfQntPaginas.setText("9090");
+		tfEdicao.setText("1");
+		tfIsbn.setText("898989");
+		tfPreco.setText("10.90");
 
 	}
 
@@ -181,15 +188,28 @@ public class CadastroDeLivros extends JDialog {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
+			double preco = Double.parseDouble(tfPreco.getText());
 			if (e.getSource() == btnSalvar) {
 
 				Livro livro = new Livro();
 				livro.setNomeLivro(tfNomeLivro.getText());
 				livro.setNumerosPaginas(tfQntPaginas.getText());
+				livro.setEdicao(tfEdicao.getText());
+				livro.setIsbn(tfIsbn.getText());
+				livro.setPreco(preco);
+				livro.setIdioma(cbIdioma.getSelectedItem() + "");
+				// livro.setGenero(Genero.valueOf(cbGenero.getSelectedItem().toString()));
+
+				if (controle.cadastrarLivro(livro)) {
+					UtilGui.successMessage("Livro Cadastrado!");
+					dispose();
+
+				}
+			} else if (e.getSource() == btnCancelar) {
+				dispose();
 
 			}
 		}
-
 	}
 
 	/**
@@ -201,7 +221,17 @@ public class CadastroDeLivros extends JDialog {
 	public static void main(String[] args) {
 
 		CadastroDeLivros cadastrarLivros = new CadastroDeLivros();
+		cadastrarLivros.setControle(new CCadastroLivro());
 		cadastrarLivros.preencherCampos();
 		cadastrarLivros.setVisible(true);
+		
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+		} catch (ClassNotFoundException | InstantiationException
+				| IllegalAccessException | UnsupportedLookAndFeelException e) {
+			Log.error(e.getMessage());
+
+		}
 	}
 }
