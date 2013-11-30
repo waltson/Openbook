@@ -60,12 +60,11 @@ public class PainelConsulta extends JPanel {
 		//nomes das colunas
 		String [] colunas = {
 			"Codigo",
-			"Titulo",
-			"Autor"
+			"Titulo"
 		};
 		//caminho para inserir os dados
 		//a array pode ser de outro tipo
-		String dados[][] = {};
+		Object dados[][] = {};
 		
 		table = new JTable(dados,colunas);
 		scrollPane.setViewportView(table);	
@@ -80,8 +79,7 @@ public class PainelConsulta extends JPanel {
 		choice_1.setFont(new Font("Dialog", Font.PLAIN, 18));
 		choice_1.setBounds(566, 38, 126, 33);
 		choice_1.add("Codigo");
-		choice_1.add("Titulo");
-		choice_1.add("Autor");
+		choice_1.add("Nome Livro");
 		choice_1.add("Preço");
 		choice_1.add("Genero");
 		panel.add(choice_1);
