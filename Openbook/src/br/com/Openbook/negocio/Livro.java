@@ -8,7 +8,7 @@ public class Livro {
 	private String idioma;
 	private String numerosPaginas;
 	private double preco;
-	private String genero;
+	private Genero genero;
 	public Livro() {
 		super();
 	}
@@ -26,11 +26,11 @@ public class Livro {
 	}
 
 	
-	public String getGenero() {
+	public Genero getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
 

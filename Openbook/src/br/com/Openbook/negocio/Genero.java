@@ -14,7 +14,7 @@ public enum Genero {
 
 	private String genero;
 
-	private Genero(String genero) {
+	Genero(String genero) {
 		this.genero = genero;
 
 	}
@@ -25,7 +25,7 @@ public enum Genero {
 
 	public static String[] elementos = null;
 
-	public static String[] elementos() {
+	public static String[] names() {
 		if (elementos != null)
 			return elementos;
 		Genero[] generos = values();
@@ -38,19 +38,19 @@ public enum Genero {
 		return elementos;
 	}
 
+	public String toString() {
+		return genero;
+	}
+
 	public static Genero getValueOf(String str) {
-		Genero[] genero = values();
+		Genero[] ci = values();
 		Genero ret = null;
-		for (int i = 0; i < genero.length; i++) {
-			if (str.equalsIgnoreCase(genero[i].toString())) {
-				ret = genero[i];
+		for (int i = 0; i < ci.length; i++) {
+			if (str.equalsIgnoreCase(ci[i].toString())) {
+				ret = ci[i];
 				break;
 			}
 		}
 		return ret;
-	}
-
-	public String toString() {
-		return genero;
 	}
 }
