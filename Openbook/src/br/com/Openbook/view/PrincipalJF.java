@@ -17,6 +17,20 @@ import java.awt.SystemColor;
 
 public class PrincipalJF extends JFrame	{
 	
+	private JMenuBar menuBar;
+	private JMenu mnArquivo;
+	private JMenuItem mntmSair;
+	private JMenu mnCadastro;
+	private JMenuItem mntmNovoProduto;
+	private JMenuItem mntmNovoCliente;
+	private JMenu mnProdutos;
+	private JMenuItem mntmEstoque;
+	private JMenuItem mntmConsultar;
+	private JMenu mnNewMenu;
+	private JMenuItem mntmNovaVenda;
+	private JMenuItem mntmHistorico;
+
+
 	public PrincipalJF()	{
 		super("Tela Principal");
 		
@@ -33,55 +47,51 @@ public class PrincipalJF extends JFrame	{
 		container.add(abas);
 		
 		
-		JMenuBar menuBar = new JMenuBar();
+		menuBar = new JMenuBar();
 		menuBar.setForeground(Color.BLACK);
 		menuBar.setBackground(new Color(255, 165, 0));
 		setJMenuBar(menuBar);
 		
-		JMenu mnArquivo = new JMenu("Arquivo");
+		mnArquivo = new JMenu("Arquivo");
 		mnArquivo.setForeground(new Color(25, 25, 112));
 		menuBar.add(mnArquivo);
 		
-		JMenuItem mntmSalvar = new JMenuItem("Salvar");
-		mntmSalvar.setBackground(Color.ORANGE);
-		mnArquivo.add(mntmSalvar);
-		
-		JMenuItem mntmSair = new JMenuItem("Sair");
+		mntmSair = new JMenuItem("Sair");
 		mntmSair.setBackground(Color.ORANGE);
 		mnArquivo.add(mntmSair);
 		
-		JMenu mnCadastro = new JMenu("Cadastro");
+		mnCadastro = new JMenu("Cadastro");
 		mnCadastro.setForeground(new Color(25, 25, 112));
 		menuBar.add(mnCadastro);
 		
-		JMenuItem mntmNovoProduto = new JMenuItem("Novo produto");
+		mntmNovoProduto = new JMenuItem("Novo produto");
 		mntmNovoProduto.setBackground(Color.ORANGE);
 		mnCadastro.add(mntmNovoProduto);
 		
-		JMenuItem mntmNovoCliente = new JMenuItem("Novo cliente");
+		mntmNovoCliente = new JMenuItem("Novo cliente");
 		mntmNovoCliente.setBackground(Color.ORANGE);
 		mnCadastro.add(mntmNovoCliente);
 		
-		JMenu mnProdutos = new JMenu("Livros");
+		mnProdutos = new JMenu("Livros");
 		mnProdutos.setForeground(new Color(25, 25, 112));
 		menuBar.add(mnProdutos);
 		
-		JMenuItem mntmEstoque = new JMenuItem("Estoque");
+		mntmEstoque = new JMenuItem("Estoque");
 		mntmEstoque.setBackground(Color.ORANGE);
 		mnProdutos.add(mntmEstoque);
 		
-		JMenuItem mntmConsultar = new JMenuItem("Consultar");
+		mntmConsultar = new JMenuItem("Consultar");
 		mnProdutos.add(mntmConsultar);
 		
-		JMenu mnNewMenu = new JMenu("Vendas");
+		mnNewMenu = new JMenu("Vendas");
 		mnNewMenu.setForeground(new Color(25, 25, 112));
 		menuBar.add(mnNewMenu);
 		
-		JMenuItem mntmNovaVenda = new JMenuItem("Nova venda");
+		mntmNovaVenda = new JMenuItem("Nova venda");
 		mntmNovaVenda.setBackground(Color.ORANGE);
 		mnNewMenu.add(mntmNovaVenda);
 		
-		JMenuItem mntmHistorico = new JMenuItem("Historico de vendas");
+		mntmHistorico = new JMenuItem("Historico de vendas");
 		mntmHistorico.setBackground(Color.ORANGE);
 		mnNewMenu.add(mntmHistorico);
 		
