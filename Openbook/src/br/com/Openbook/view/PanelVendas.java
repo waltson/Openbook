@@ -27,6 +27,8 @@ public class PanelVendas extends JPanel {
 	private JTable table;
 	private JScrollPane scrollPane;
 	private DefaultTableModel model;
+	private JButton btnPesquisarCliente;
+	private JButton btnComprar;
 	
 	public PanelVendas() {
 		panel = new JPanel();		
@@ -114,7 +116,7 @@ public class PanelVendas extends JPanel {
 		panel.add(tfCliente);
 		tfCliente.setColumns(10);
 		
-		JButton btnComprar = new JButton("Comprar");
+		btnComprar = new JButton("Comprar");
 		btnComprar.setEnabled(false);
 		btnComprar.setForeground(new Color(0, 139, 139));
 		btnComprar.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -135,7 +137,7 @@ public class PanelVendas extends JPanel {
 		btnTiposDePagamento.setBounds(524, 225, 306, 59);
 		panel.add(btnTiposDePagamento);
 		
-		JButton btnPesquisarCliente = new JButton("Pesquisar Cliente");
+		btnPesquisarCliente = new JButton("Pesquisar Cliente");
 		btnPesquisarCliente.setForeground(new Color(0, 139, 139));
 		btnPesquisarCliente.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnPesquisarCliente.setBounds(524, 120, 306, 59);
