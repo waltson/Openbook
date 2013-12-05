@@ -196,3 +196,11 @@ DEBUG 12:43:39 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,enderec
 DEBUG 13:05:00 [AWT-EventQueue-0] Cadastro livro:
 br.com.Openbook.negocio.Livro@123ce3f - (CCadastroLivro.java:31)
 DEBUG 13:05:00 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('causa','123','1','ANTOLOGIAS','Inglês','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:39)
+DEBUG 10:14:51 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro FROM table WHERE id_livro LIKE '%1%' - (RepositorioLivro_Banco_de_Dados.java:92)
+ERROR 10:14:51 [AWT-EventQueue-0] [SQLITE_ERROR] SQL error or missing database (near "table": syntax error) - (RepositorioLivro_Banco_de_Dados.java:99)
+DEBUG 10:16:14 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro FROM main.Livro_Livraria WHERE id_livro LIKE '%1%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 10:16:23 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro FROM main.Livro_Livraria WHERE id_livro LIKE '%2%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 10:16:25 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro FROM main.Livro_Livraria WHERE id_livro LIKE '%3%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 10:29:38 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE id_livro = '1' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 10:29:46 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE id_livro = '3' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 10:29:51 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE nome_livro LIKE '%a%' - (RepositorioLivro_Banco_de_Dados.java:92)

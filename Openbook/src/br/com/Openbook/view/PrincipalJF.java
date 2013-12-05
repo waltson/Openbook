@@ -13,6 +13,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+
+import br.com.Openbook.controller.CCadastroLivro;
+
 import java.awt.SystemColor;
 
 public class PrincipalJF extends JFrame	{
@@ -30,6 +33,7 @@ public class PrincipalJF extends JFrame	{
 	private JMenuItem mntmNovaVenda;
 	private JMenuItem mntmHistorico;
 
+	
 
 	public PrincipalJF()	{
 		super("Tela Principal");
@@ -42,7 +46,11 @@ public class PrincipalJF extends JFrame	{
 		abas.setBackground(new Color(233, 150, 122));
 		abas.add("Home", new PainelHome());
 		abas.add("Vendas",new PanelVendas());
-		abas.add("Consultar Livro",new PainelConsulta());
+		
+		PainelConsulta consultaLivros = new PainelConsulta();
+		consultaLivros.setControle(new CCadastroLivro());
+
+		abas.add("Consultar Livro",consultaLivros);
 		abas.add("Historico", new PanelHistorico());
 		container.add(abas);
 		

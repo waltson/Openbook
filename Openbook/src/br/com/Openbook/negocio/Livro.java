@@ -81,5 +81,10 @@ public class Livro {
 	public void setNumerosPaginas(String numerosPaginas) {
 		this.numerosPaginas = numerosPaginas;
 	}
+	
+	public static String[] getColunas(){
+		return new String[]{"id_livro","nome_livro","genero_livro","preco_livro"};
+	}
+	
 
 }

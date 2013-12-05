@@ -1,5 +1,7 @@
 package br.com.Openbook.dados;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -14,6 +16,7 @@ public class RepositorioLivro_Banco_de_Dados {
 	private Conexao conn;
 
 	public RepositorioLivro_Banco_de_Dados() {
+		
 		conn = new Conexao();
 		conn.openDB("Openbook.sqlite");
 
@@ -42,6 +45,7 @@ public class RepositorioLivro_Banco_de_Dados {
 	}
 
 	private String LivroInfo(Livro livro) {
+		
 		StringBuilder saida = new StringBuilder();
 		saida.append("'" + livro.getNomeLivro() + "',");
 		saida.append("'" + livro.getIsbn() + "',");
@@ -52,7 +56,50 @@ public class RepositorioLivro_Banco_de_Dados {
 		saida.append(livro.getPreco());
 
 		return saida.toString();
+	}
 
+	public ResultSet pesquisaComRetorno(String exibirColunas[], String table, String coluna, String criterio, boolean withLike) {
+
+		ResultSet rs = null;
+		
+		
+		String sql ;
+		
+		
+		if (exibirColunas == null)
+			sql = "SELECT * FROM main."+table;
+		else{
+			
+			sql = "SELECT ";
+			
+			for (int i = 0; i < exibirColunas.length ; i++){
+				sql += exibirColunas[i];
+				if(i+1 < exibirColunas.length )
+					sql += ",";
+			}
+			
+			sql+= " FROM main."+table;
+				
+		}
+		
+		if(!criterio.equals("")){
+			if(withLike)
+				sql += " WHERE "+coluna+" LIKE '%"+criterio+"%'";
+			else
+				sql += " WHERE "+coluna+" = '"+criterio+"'";
+		}
+		
+		Log.debug("Sql: "+sql);
+		
+		 try {
+			rs = conn.executeQuery(sql);
+	
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			Log.error(e.getMessage());
+		}
+		
+		 return rs;
 	}
 
 }
