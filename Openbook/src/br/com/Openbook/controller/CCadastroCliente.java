@@ -1,11 +1,18 @@
 package br.com.Openbook.controller;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
+
+import javax.swing.table.DefaultTableModel;
 
 import org.apache.log4j.Logger;
 
 import br.com.Openbook.dados.RepositorioCliente_Banco_de_Dados;
 import br.com.Openbook.negocio.Cliente;
+import br.com.Openbook.negocio.Livro;
+import br.com.Openbook.negocio.Util;
 import br.com.Openbook.negocio.UtilGui;
 
 public class CCadastroCliente {
@@ -45,6 +52,35 @@ public class CCadastroCliente {
 
 			}
 
+			public Map<String, String> getClienteInfoById(int codigoCliente) {
+				
+				Map<String,String> resultMap = null;
+				
+				ResultSet rs = (ResultSet) conect.pesquisaComRetorno(null,"Cliente_Livraria","id_Livro", String.valueOf(codigoCliente),false);
+				
+				try{
+					resultMap = Util.getMapFromResultSet(rs);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					Log.error(e.getMessage());
+				}
+			
+				return resultMap;
+			}
+			
+			public DefaultTableModel procurarCliente( String coluna, String criterio, boolean withlike){
+				
+				ResultSet rs = (ResultSet) conect.pesquisaComRetorno(Cliente.getColunas(),"Livro_Livraria",coluna, criterio,withlike);
+				DefaultTableModel model = null;
+				
+				try {
+					model =  Util.buildTableModel(rs);
+				} catch (SQLException e) {
+					Log.error(e.getMessage());
+				}
+				
+				return model;
+			}
 		
 	}
 

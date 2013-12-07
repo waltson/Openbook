@@ -204,3 +204,103 @@ DEBUG 10:16:25 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro FROM main.Livr
 DEBUG 10:29:38 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE id_livro = '1' - (RepositorioLivro_Banco_de_Dados.java:92)
 DEBUG 10:29:46 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE id_livro = '3' - (RepositorioLivro_Banco_de_Dados.java:92)
 DEBUG 10:29:51 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE nome_livro LIKE '%a%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 21:30:11 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE nome_livro LIKE '%causa%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 19:11:16 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@1bb8ea - (CCadastroLivro.java:37)
+DEBUG 19:11:16 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:16 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:18 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@10a6723 - (CCadastroLivro.java:37)
+DEBUG 19:11:18 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:18 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:18 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@1f95673 - (CCadastroLivro.java:37)
+DEBUG 19:11:18 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:18 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:19 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@14a8f44 - (CCadastroLivro.java:37)
+DEBUG 19:11:19 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:19 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:20 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@3f377 - (CCadastroLivro.java:37)
+DEBUG 19:11:20 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:20 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:22 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@16535bf - (CCadastroLivro.java:37)
+DEBUG 19:11:22 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:22 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:23 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@9ffb18 - (CCadastroLivro.java:37)
+DEBUG 19:11:23 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:23 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:23 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@11de914 - (CCadastroLivro.java:37)
+DEBUG 19:11:23 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:23 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:24 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@b1406b - (CCadastroLivro.java:37)
+DEBUG 19:11:24 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:24 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:24 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@fc5408 - (CCadastroLivro.java:37)
+DEBUG 19:11:24 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:24 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:24 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@1f102c1 - (CCadastroLivro.java:37)
+DEBUG 19:11:24 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:24 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:25 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@1420fea - (CCadastroLivro.java:37)
+DEBUG 19:11:25 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:25 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:25 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@230be4 - (CCadastroLivro.java:37)
+DEBUG 19:11:25 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:25 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:25 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@e1e567 - (CCadastroLivro.java:37)
+DEBUG 19:11:25 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:25 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:29 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@17aaeec - (CCadastroLivro.java:37)
+DEBUG 19:11:29 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:29 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:39 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@12db7c - (CCadastroLivro.java:37)
+DEBUG 19:11:39 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:39 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:39 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@7c28c - (CCadastroLivro.java:37)
+DEBUG 19:11:39 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:39 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:39 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@17588d5 - (CCadastroLivro.java:37)
+DEBUG 19:11:39 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('java','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:11:39 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:11:53 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@220711 - (CCadastroCliente.java:38)
+DEBUG 19:11:53 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 19:11:56 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:48)
+DEBUG 19:12:21 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@bec43f - (CCadastroCliente.java:38)
+DEBUG 19:12:21 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','2234','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+DEBUG 19:14:09 [AWT-EventQueue-0] Sql: SELECT id_livro,nome_livro,genero_livro,preco_livro FROM main.Livro_Livraria WHERE nome_livro LIKE '%causa%' - (RepositorioLivro_Banco_de_Dados.java:92)
+DEBUG 19:48:04 [AWT-EventQueue-0] Cadastro Cliente:
+br.com.Openbook.negocio.Cliente@f507d2 - (CCadastroCliente.java:38)
+DEBUG 19:48:04 [AWT-EventQueue-0] INSERT INTO main.Cliente_Livraria(nome,endereco,bairro,cidade,estado,cep,telefone,cpf,sexo)VALUES('Waltson','RUA','RUa','cidade','Acre',' 888844','11111111','13425456','Masculino') - (RepositorioCliente_Banco_de_Dados.java:44)
+ERROR 19:48:08 [AWT-EventQueue-0] Erro ao Cadastrar o Cliente column cpf is not unique - (CCadastroCliente.java:48)
+DEBUG 19:48:16 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@101b54e - (CCadastroLivro.java:37)
+DEBUG 19:48:16 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('causa','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:48:16 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:48:17 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@1a7905e - (CCadastroLivro.java:37)
+DEBUG 19:48:17 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('causa','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:48:17 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:48:18 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@124bd93 - (CCadastroLivro.java:37)
+DEBUG 19:48:18 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('causa','898989','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)
+ERROR 19:48:18 [AWT-EventQueue-0] Erro ao Cadastrar o Livro column isbn_livro is not unique - (CCadastroLivro.java:45)
+DEBUG 19:48:41 [AWT-EventQueue-0] Cadastro livro:
+br.com.Openbook.negocio.Livro@130671e - (CCadastroLivro.java:37)
+DEBUG 19:48:41 [AWT-EventQueue-0] INSERT INTO main.Livro_Livraria(nome_Livro,isbn_Livro,edicao_Livro,genero_livro,idioma_Livro,n_pagina,preco_livro)VALUES('causa','1090','1','AGROPECUÁRIA','Português','9090',10.9) - (RepositorioLivro_Banco_de_Dados.java:42)

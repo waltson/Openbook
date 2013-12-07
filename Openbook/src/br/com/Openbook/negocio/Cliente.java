@@ -102,4 +102,12 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
+	public static String[] getColunas() {
+		// TODO Auto-generated method stub
+		return new String[] { "id_cliente", "nome_cliente", "endereco_cliente",
+				"bairro_cliente", "cidade_cliente", "estado_cliente",
+				"cep_cliente", "telefone_cliente", "cpf_cliente",
+				"sexo_cliente" };
+	}
+
 }

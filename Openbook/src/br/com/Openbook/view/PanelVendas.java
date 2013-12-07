@@ -2,6 +2,8 @@ package br.com.Openbook.view;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -12,6 +14,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+
+import org.apache.log4j.Logger;
+
+import br.com.Openbook.controller.CCadastroCliente;
+import br.com.Openbook.controller.CVendas;
+import br.com.Openbook.negocio.UtilGui;
 
 public class PanelVendas extends JPanel {
 	private JPanel panel;
@@ -29,7 +37,13 @@ public class PanelVendas extends JPanel {
 	private DefaultTableModel model;
 	private JButton btnPesquisarCliente;
 	private JButton btnComprar;
-	
+	private TratadorEvento eventos;
+	private CVendas controle;
+	private CCadastroCliente cont;
+	private Logger Log = Logger.getLogger(PanelVendas.class);
+	public void init(){
+		eventos = new TratadorEvento();
+	}
 	public PanelVendas() {
 		panel = new JPanel();		
 		panel.setBackground(new Color(255, 218, 185));
@@ -178,5 +192,36 @@ public class PanelVendas extends JPanel {
 		panel.add(lblCarrinhoDeCompras);
 		
 		setSize(862, 519);
+	}
+	public class TratadorEvento implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+		
+			if(e.getSource() == btnPesquisarCliente && !tfCliente.getText().equals("")){
+				DefaultTableModel model = null;
+				String criterioValor = tfCliente.getText();
+				String criterio = comboBox.getSelectedItem().toString();
+				if(criterio.equals("Id")){
+					model = cont.procurarCliente("Id", criterioValor, false);
+					
+				}else if (criterio.equals("Nome")){
+					model = cont.procurarCliente("Nome", criterioValor, true);
+					
+				}else if(criterio.equals("Cpf")){
+					model = cont.procurarCliente("CPF", criterioValor, false);
+					
+				}
+				if(model != null){
+					table.setModel(model);
+				}else{
+					Log.error("Cliente com "+criterio+" = " + criterioValor + " não foi encontrado");
+					UtilGui.errorMessage("Cliente com "+criterio+" = " + criterioValor + " não foi encontrado");
+				}
+			}
+			
+		}
+		
 	}
 }
